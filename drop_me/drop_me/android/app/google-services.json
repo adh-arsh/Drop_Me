@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "848173939572",
+    "project_id": "dropme-fe350",
+    "storage_bucket": "dropme-fe350.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848173939572:android:ccdb9ba82f526795fb4a21",
+        "android_client_info": {
+          "package_name": "com.drop_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848173939572-9snvui2qcq7a40qt77p5cducb8sgq25u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8acEhvchlhZv_K56i23tk-ZmDQQGVAtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848173939572-9snvui2qcq7a40qt77p5cducb8sgq25u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
