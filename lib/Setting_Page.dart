@@ -133,7 +133,7 @@ class AboutDeveloper extends StatelessWidget{
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            Text('Made by adh-arsh',textAlign: TextAlign.center,style: TextStyle(fontSize: 15),),
+            Text('-',textAlign: TextAlign.center,style: TextStyle(fontSize: 15),),
           ],
         ),
       ),

@@ -145,7 +145,7 @@ class _State extends State<LoginPage> {
                 appBar: AppBar(
                   title: Text('Registration'),
                   actions: [
-                    IconButton(icon: Icon(Icons.check_circle_outline), onPressed:_submit),
+                    IconButton(icon: Icon(Icons.check_circle_outline), onPressed: _submit),
                   ],
                 ),
                 body: ListView(
@@ -259,6 +259,7 @@ class _State extends State<LoginPage> {
                         ],
                       ),
                     ),
+                    ElevatedButton(onPressed: ()=>{print("4323")}, child: Text("111"))
                   ],
                 ),
               );
@@ -267,8 +268,24 @@ class _State extends State<LoginPage> {
   }
 
   _submit() async {
+
+
     try {
       String uid;
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text,
+            password: passwordController.text
+        );
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          print('The password provided is too weak.');
+        } else if (e.code == 'email-already-in-use') {
+          print('The account already exists for that email.');
+        }
+      } catch (e) {
+        print(e);
+      }
       uid = FirebaseAuth.instance.currentUser.uid;
       databaseReference = databaseReference.child("users").child(uid);
       databaseReference.child("userId").set(uid).toString();

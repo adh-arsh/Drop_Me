@@ -1,18 +1,72 @@
 {
   "project_info": {
     "project_number": "848173939572",
+    "firebase_url": "https://dropme-fe350-default-rtdb.firebaseio.com",
     "project_id": "dropme-fe350",
     "storage_bucket": "dropme-fe350.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:848173939572:android:ccdb9ba82f526795fb4a21",
+        "mobilesdk_app_id": "1:848173939572:android:47fcc259811c1a94fb4a21",
+        "android_client_info": {
+          "package_name": "com.drop.me.dropme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848173939572-m4ham8o9s11e57pfg1ckps9ed9e6sj87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drop.me.dropme",
+            "certificate_hash": "998db16e6be1fb81e96a455d202a40c956c80ac4"
+          }
+        },
+        {
+          "client_id": "848173939572-9snvui2qcq7a40qt77p5cducb8sgq25u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8acEhvchlhZv_K56i23tk-ZmDQQGVAtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848173939572-9snvui2qcq7a40qt77p5cducb8sgq25u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848173939572:android:a21971b6f75e8bd9fb4a21",
         "android_client_info": {
           "package_name": "com.drop_me"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "848173939572-cag2vgirnroajechkkss1ugmvu4j7lp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drop_me",
+            "certificate_hash": "30d6d14a7f320c147d1cccd923adb2ffef37bf35"
+          }
+        },
+        {
+          "client_id": "848173939572-ie7blhguu2qqsjkmbucoiokanff5clia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.drop_me",
+            "certificate_hash": "998db16e6be1fb81e96a455d202a40c956c80ac4"
+          }
+        },
         {
           "client_id": "848173939572-9snvui2qcq7a40qt77p5cducb8sgq25u.apps.googleusercontent.com",
           "client_type": 3
