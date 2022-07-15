@@ -27,6 +27,25 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage>{
 
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  User user;
+  String currentUId;
+  String uid;
+  String currentEmail;
+
+  @override
+  void initState() {
+    super.initState();
+
+    user = auth.currentUser;
+    // Future.delayed(Duration(seconds: 5));
+    // sleep(Duration(seconds: 5));
+    currentUId = user.uid;
+    uid = currentUId;
+    currentEmail = user.email;
+    print(currentUId);
+  }
+
   bool isAvailable = false;
   var availableTs;
  // bool requestedBtn = false;
@@ -36,14 +55,14 @@ class _HomePageState extends State<HomePage>{
   bool requested = false;
   bool activeStatus=false;
 
-  String uid = FirebaseAuth.instance.currentUser.uid;
+
+
   final databaseReference = FirebaseDatabase.instance.reference();
   final userDatabaseReference = FirebaseDatabase.instance.reference().child("users");
 
   @override
   Widget build(BuildContext context) {
     getData();
-
 
     databaseReference.child('requests').child(route).child(uid).child('active').once().then((
         DataSnapshot snapshot) {

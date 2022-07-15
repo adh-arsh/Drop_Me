@@ -116,14 +116,38 @@ class _State extends State<LoginPage> {
     );
   }
 
-
+  bool _success;
+  String _userEmail;
 
   Future<void> _signInWithEmailAndPassword() async {
     try {
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text,
+          password: passwordController.text
+      );
+
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => HomePage()),
       );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    }
+
+    /*
+    try {
+
+      //firebase authentication function here
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage()),
+      );
+
+
       print('login');
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
@@ -133,6 +157,7 @@ class _State extends State<LoginPage> {
         print('Wrong password provided for that user.');
       }
     }
+    */
   }
 
   //for registration
@@ -259,7 +284,7 @@ class _State extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    ElevatedButton(onPressed: ()=>{print("4323")}, child: Text("111"))
+                   /* ElevatedButton(onPressed: ()=>{print("4323")}, child: Text("111"))*/
                   ],
                 ),
               );
